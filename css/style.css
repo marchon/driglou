@@ -1,0 +1,17 @@
+.gallery{
+  padding-left: 3px;
+}
+.gallery-item{
+    display: inline-block;
+    width: 33.33%;
+    height: auto;
+    margin-left: -3px;
+}
+.item-info{
+  padding: 4px 4px;
+  background-color: gray;
+  margin-bottom: 30px;
+}
+h3, h4, p{
+  margin: 4px 0;
+}
