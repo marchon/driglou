@@ -2,7 +2,7 @@
   <head>
     <title>My gallery wished to be put on fb</title>
     <link rel="stylesheet" href="css/style.css" media="screen" charset="utf-8">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="scripts/greyscale.js"></script>
   </head>
   <body>
