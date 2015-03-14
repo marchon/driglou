@@ -2,6 +2,8 @@
   <head>
     <title>My gallery wished to be put on fb</title>
     <link rel="stylesheet" href="css/style.css" media="screen" charset="utf-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="scripts/greyscale.js"></script>
   </head>
   <body>
   <script>
@@ -48,7 +50,7 @@ FB.getLoginStatus(function(response) {
     <h1 id="fb-welcome"></h1>
     <div class = "gallery">
       <div class = "gallery-item">
-        <img src="images/1.jpg" alt="" />
+        <img src="images/1.jpg" class="greyscale" alt="" />
         <div class="item-info">
           <h3>The title of the work</h3>
           <h4>Techniques: pencil, watercolors...</h4>
@@ -58,7 +60,7 @@ FB.getLoginStatus(function(response) {
         </div>
       </div>
       <div class = "gallery-item">
-        <img src="images/2.jpg" alt="" />
+        <img src="images/2.jpg" class="greyscale" alt="" />
         <div class="item-info">
           <h3>The title of the work</h3>
           <h4>Techniques: pencil, watercolors...</h4>
@@ -68,7 +70,7 @@ FB.getLoginStatus(function(response) {
         </div>
       </div>
       <div class = "gallery-item">
-        <img src="images/3.jpg" alt="" />
+        <img src="images/3.jpg" class="greyscale" alt="" />
         <div class="item-info">
           <h3>The title of the work</h3>
           <h4>Techniques: pencil, watercolors...</h4>
@@ -78,7 +80,7 @@ FB.getLoginStatus(function(response) {
         </div>
       </div>
       <div class = "gallery-item">
-        <img src="images/4.jpg" alt="" />
+        <img src="images/4.jpg" class="greyscale" alt="" />
         <div class="item-info">
           <h3>The title of the work</h3>
           <h4>Techniques: pencil, watercolors...</h4>
@@ -88,7 +90,7 @@ FB.getLoginStatus(function(response) {
         </div>
       </div>
       <div class = "gallery-item">
-        <img src="images/5.jpg" alt="" />
+        <img src="images/5.jpg" class="greyscale" alt="" />
         <div class="item-info">
           <h3>The title of the work</h3>
           <h4>Techniques: pencil, watercolors...</h4>
@@ -98,7 +100,7 @@ FB.getLoginStatus(function(response) {
         </div>
       </div>
       <div class = "gallery-item">
-        <img src="images/6.jpg" alt="" />
+        <img src="images/6.jpg" class="greyscale" alt="" />
         <div class="item-info">
           <h3>The title of the work</h3>
           <h4>Techniques: pencil, watercolors...</h4>
@@ -108,7 +110,19 @@ FB.getLoginStatus(function(response) {
         </div>
       </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="scripts/grayscale.js"></script>
+    <script>
+      $(function() {
+        // fade in the grayscaled images to avoid visual jump
+        $('.greyscale').hide().fadeIn(1000);
+      });
+      // user window.load to ensure images have been loaded
+      $(window).load(function () {
+        $('.greyscale').greyScale({
+          // call the plugin with non-defult fadeTime (default: 400ms)
+          fadeTime: 500,
+          reverse: false
+        });
+      });
+    </script>
   </body>
 </html>

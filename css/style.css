@@ -1,13 +1,13 @@
 .gallery{
+  width: 750px;
   padding-left: 3px;
 }
 .gallery-item{
-    display: inline-block;
-    width: 33.33%;
-    margin-left: -3px;
+  display: inline-block;
+  margin-left: -3px;
 }
 .gallery-item img{
-  width: 100%;
+  width: 250px;
   height: auto;
 }
 .item-info{
