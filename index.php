@@ -4,6 +4,25 @@
     <link rel="stylesheet" href="css/style.css" media="screen" charset="utf-8">
   </head>
   <body>
+  <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '430868697071448',
+      xfbml      : true,
+      version    : 'v2.2'
+    });
+
+    // ADD ADDITIONAL FACEBOOK CODE HERE
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+  </script>
     <div class = "gallery">
       <div class = "gallery-item">
         <img src="images/1.jpg" alt="" />
