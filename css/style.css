@@ -4,8 +4,11 @@
 .gallery-item{
     display: inline-block;
     width: 33.33%;
-    height: auto;
     margin-left: -3px;
+}
+.gallery-item img{
+  width: 100%;
+  height: auto;
 }
 .item-info{
   padding: 4px 4px;
