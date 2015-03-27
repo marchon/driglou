@@ -22,6 +22,9 @@
      });
 
      // ADD ADDITIONAL FACEBOOK CODE HERE
+    window.onload = function() {
+      FB.Canvas.setAutoGrow();
+    }
    };
 
    (function(d, s, id){
