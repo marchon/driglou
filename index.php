@@ -8,7 +8,7 @@
   	<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
     <script type="text/javascript">
 		$(document).ready(function() {
-			$('.gallery-image').fancybox();
+			$('.gallery-image').fancybox({autoCenter: true});
     });
     </script>
   </head>
