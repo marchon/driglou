@@ -9,6 +9,7 @@
     <script type="text/javascript">
 		$(document).ready(function() {
 			$('.gallery-image').fancybox({autoCenter: true});
+      $.fancybox.reposition();
     });
     </script>
   </head>
