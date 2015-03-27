@@ -26,7 +26,7 @@
       FB.Canvas.setAutoGrow();
     }
    };
-   $.fancybox.reposition();
+
    (function(d, s, id){
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) {return;}
@@ -39,6 +39,7 @@
       <h1 id="fb-welcome">Gallery</h1>
 
       <script>
+        $.fancybox.reposition();
         $(function() {
             $(".lazy").lazyload();
         });
