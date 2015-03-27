@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="css/style.css" media="screen" charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="source/jquery.fancybox.js?v=2.1.5"></script>
+    <script type="text/javascript" src="scripts/jquery.lazyload.min.js"></script>
   	<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
     <script type="text/javascript">
 		$(document).ready(function() {
@@ -34,9 +35,13 @@
     <div id="container">
       <h1 id="fb-welcome">Gallery</h1>
 
-
+      <script>
+        $(function() {
+            $(".lazy").lazyload();
+        });
+      </script>
       <!-- Gallery item START -->
-      <div class="gallery-item">
+      <div class="gallery-item lazy">
         <a class="gallery-image" href="images/28.jpg" data-fancybox-group="gallery">
           <div class="gallery-frame">
             <div class="gallery-img" style="background-image: url('images/28.jpg')">
@@ -50,7 +55,7 @@
       </div>
       <!-- Gallery item END -->
       <!-- Gallery item START -->
-      <div class="gallery-item">
+      <div class="gallery-item lazy">
         <a class="gallery-image" href="images/27.jpg" data-fancybox-group="gallery">
           <div class="gallery-frame">
             <div class="gallery-img" style="background-image: url('images/27.jpg')">
@@ -67,7 +72,7 @@
       <hr>
 
       <!-- Gallery item START -->
-      <div class="gallery-item">
+      <div class="gallery-item lazy">
         <a class="gallery-image" href="images/26.jpg" data-fancybox-group="gallery">
           <div class="gallery-frame">
             <div class="gallery-img" style="background-image: url('images/26.jpg')">
@@ -81,7 +86,7 @@
       </div>
       <!-- Gallery item END -->
       <!-- Gallery item START -->
-      <div class="gallery-item">
+      <div class="gallery-item lazy">
         <a class="gallery-image" href="images/25.jpg" data-fancybox-group="gallery">
           <div class="gallery-frame">
             <div class="gallery-img" style="background-image: url('images/25.jpg')">
@@ -98,7 +103,7 @@
       <hr>
 
       <!-- Gallery item START -->
-      <div class="gallery-item">
+      <div class="gallery-item lazy">
         <a class="gallery-image" href="images/24.jpg" data-fancybox-group="gallery">
           <div class="gallery-frame">
             <div class="gallery-img" style="background-image: url('images/24.jpg')">
@@ -112,7 +117,7 @@
       </div>
       <!-- Gallery item END -->
       <!-- Gallery item START -->
-      <div class="gallery-item">
+      <div class="gallery-item lazy">
         <a class="gallery-image" href="images/23.jpg" data-fancybox-group="gallery">
           <div class="gallery-frame">
             <div class="gallery-img" style="background-image: url('images/23.jpg')">
@@ -129,7 +134,7 @@
       <hr>
 
       <!-- Gallery item START -->
-      <div class="gallery-item">
+      <div class="gallery-item lazy">
         <a class="gallery-image" href="images/22.jpg" data-fancybox-group="gallery">
           <div class="gallery-frame">
             <div class="gallery-img" style="background-image: url('images/22.jpg')">
@@ -143,7 +148,7 @@
       </div>
       <!-- Gallery item END -->
       <!-- Gallery item START -->
-      <div class="gallery-item">
+      <div class="gallery-item lazy">
         <a class="gallery-image" href="images/21.jpg" data-fancybox-group="gallery">
           <div class="gallery-frame">
             <div class="gallery-img" style="background-image: url('images/21.jpg')">
@@ -160,7 +165,7 @@
       <hr>
 
       <!-- Gallery item START -->
-      <div class="gallery-item">
+      <div class="gallery-item lazy">
         <a class="gallery-image" href="images/20.jpg" data-fancybox-group="gallery">
           <div class="gallery-frame">
             <div class="gallery-img" style="background-image: url('images/20.jpg')">
@@ -174,7 +179,7 @@
       </div>
       <!-- Gallery item END -->
       <!-- Gallery item START -->
-      <div class="gallery-item">
+      <div class="gallery-item lazy">
         <a class="gallery-image" href="images/19.jpg" data-fancybox-group="gallery">
           <div class="gallery-frame">
             <div class="gallery-img" style="background-image: url('images/19.jpg')">
@@ -191,7 +196,7 @@
       <hr>
 
       <!-- Gallery item START -->
-      <div class="gallery-item">
+      <div class="gallery-item lazy">
         <a class="gallery-image" href="images/18.jpg" data-fancybox-group="gallery">
           <div class="gallery-frame">
             <div class="gallery-img" style="background-image: url('images/18.jpg')">
@@ -205,7 +210,7 @@
       </div>
       <!-- Gallery item END -->
       <!-- Gallery item START -->
-      <div class="gallery-item">
+      <div class="gallery-item lazy">
         <a class="gallery-image" href="images/17.jpg" data-fancybox-group="gallery">
           <div class="gallery-frame">
             <div class="gallery-img" style="background-image: url('images/17.jpg')">
@@ -222,7 +227,7 @@
       <hr>
 
       <!-- Gallery item START -->
-      <div class="gallery-item">
+      <div class="gallery-item lazy">
         <a class="gallery-image" href="images/16.jpg" data-fancybox-group="gallery">
           <div class="gallery-frame">
             <div class="gallery-img" style="background-image: url('images/16.jpg')">
@@ -236,7 +241,7 @@
       </div>
       <!-- Gallery item END -->
       <!-- Gallery item START -->
-      <div class="gallery-item">
+      <div class="gallery-item lazy">
         <a class="gallery-image" href="images/15.jpg" data-fancybox-group="gallery">
           <div class="gallery-frame">
             <div class="gallery-img" style="background-image: url('images/15.jpg')">
@@ -253,7 +258,7 @@
       <hr>
 
       <!-- Gallery item START -->
-      <div class="gallery-item">
+      <div class="gallery-item lazy">
         <a class="gallery-image" href="images/14.jpg" data-fancybox-group="gallery">
           <div class="gallery-frame">
             <div class="gallery-img" style="background-image: url('images/14.jpg')">
@@ -266,7 +271,7 @@
       </div>
       <!-- Gallery item END -->
       <!-- Gallery item START -->
-      <div class="gallery-item">
+      <div class="gallery-item lazy">
         <a class="gallery-image" href="images/13.jpg" data-fancybox-group="gallery">
           <div class="gallery-frame">
             <div class="gallery-img" style="background-image: url('images/13.jpg')">
@@ -283,7 +288,7 @@
       <hr>
 
       <!-- Gallery item START -->
-      <div class="gallery-item">
+      <div class="gallery-item lazy">
         <a class="gallery-image" href="images/12.jpg" data-fancybox-group="gallery">
           <div class="gallery-frame">
             <div class="gallery-img" style="background-image: url('images/12.jpg')">
@@ -297,7 +302,7 @@
       </div>
       <!-- Gallery item END -->
       <!-- Gallery item START -->
-      <div class="gallery-item">
+      <div class="gallery-item lazy">
         <a class="gallery-image" href="images/11.jpg" data-fancybox-group="gallery">
           <div class="gallery-frame">
             <div class="gallery-img" style="background-image: url('images/11.jpg')">
@@ -314,7 +319,7 @@
       <hr>
 
       <!-- Gallery item START -->
-      <div class="gallery-item">
+      <div class="gallery-item lazy">
         <a class="gallery-image" href="images/10.jpg" data-fancybox-group="gallery">
           <div class="gallery-frame">
             <div class="gallery-img" style="background-image: url('images/10.jpg')">
@@ -328,7 +333,7 @@
       </div>
       <!-- Gallery item END -->
       <!-- Gallery item START -->
-      <div class="gallery-item">
+      <div class="gallery-item lazy">
         <a class="gallery-image" href="images/9.jpg" data-fancybox-group="gallery">
           <div class="gallery-frame">
             <div class="gallery-img" style="background-image: url('images/9.jpg')">
@@ -345,7 +350,7 @@
       <hr>
 
       <!-- Gallery item START -->
-      <div class="gallery-item">
+      <div class="gallery-item lazy">
         <a class="gallery-image" href="images/8.jpg" data-fancybox-group="gallery">
           <div class="gallery-frame">
             <div class="gallery-img" style="background-image: url('images/8.jpg')">
@@ -359,7 +364,7 @@
       </div>
       <!-- Gallery item END -->
       <!-- Gallery item START -->
-      <div class="gallery-item">
+      <div class="gallery-item lazy">
         <a class="gallery-image" href="images/7.jpg" data-fancybox-group="gallery">
           <div class="gallery-frame">
             <div class="gallery-img" style="background-image: url('images/7.jpg')">
@@ -376,7 +381,7 @@
       <hr>
 
       <!-- Gallery item START -->
-      <div class="gallery-item">
+      <div class="gallery-item lazy">
         <a class="gallery-image" href="images/6.jpg" data-fancybox-group="gallery">
           <div class="gallery-frame">
             <div class="gallery-img" style="background-image: url('images/6.jpg')">
@@ -389,7 +394,7 @@
       </div>
       <!-- Gallery item END -->
       <!-- Gallery item START -->
-      <div class="gallery-item">
+      <div class="gallery-item lazy">
         <a class="gallery-image" href="images/5.jpg" data-fancybox-group="gallery">
           <div class="gallery-frame">
             <div class="gallery-img" style="background-image: url('images/5.jpg')">
@@ -406,7 +411,7 @@
       <hr>
 
       <!-- Gallery item START -->
-      <div class="gallery-item">
+      <div class="gallery-item lazy">
         <a class="gallery-image" href="images/4.jpg" data-fancybox-group="gallery">
           <div class="gallery-frame">
             <div class="gallery-img" style="background-image: url('images/4.jpg')">
@@ -419,7 +424,7 @@
       </div>
       <!-- Gallery item END -->
       <!-- Gallery item START -->
-      <div class="gallery-item">
+      <div class="gallery-item lazy">
         <a class="gallery-image" href="images/3.jpg" data-fancybox-group="gallery">
           <div class="gallery-frame">
             <div class="gallery-img" style="background-image: url('images/3.jpg')">
@@ -436,7 +441,7 @@
       <hr>
 
       <!-- Gallery item START -->
-      <div class="gallery-item">
+      <div class="gallery-item lazy">
         <a class="gallery-image" href="images/2.jpg" data-fancybox-group="gallery">
           <div class="gallery-frame">
             <div class="gallery-img" style="background-image: url('images/2.jpg')">
@@ -450,7 +455,7 @@
       </div>
       <!-- Gallery item END -->
       <!-- Gallery item START -->
-      <div class="gallery-item">
+      <div class="gallery-item lazy">
         <a class="gallery-image" href="images/1.jpg" data-fancybox-group="gallery">
           <div class="gallery-frame">
             <div class="gallery-img" style="background-image: url('images/1.jpg')">
