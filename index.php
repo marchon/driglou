@@ -8,11 +8,7 @@
   	<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
     <script type="text/javascript">
 		$(document).ready(function() {
-			$('.gallery-image')parent.$.fancybox({
-        padding: 0,
-        autoCenter: true
-      });
-      $.fancybox.reposition();
+			$('.gallery-image').fancybox({autoCenter: true});
     });
     </script>
   </head>
@@ -30,7 +26,7 @@
       FB.Canvas.setAutoGrow();
     }
    };
-
+   $.fancybox.reposition();
    (function(d, s, id){
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) {return;}
