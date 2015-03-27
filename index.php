@@ -8,15 +8,19 @@
   	<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
     <script type="text/javascript">
 		$(document).ready(function() {
-      var orig = $.fancybox._getPosition;
-      $.extend($.fancybox, {
-          _getPosition: function(onlyAbsolute) {
-              var rez = orig(onlyAbsolute);
-              delete rez.top;
-              return rez;
-          }
-      });
-			$('.gallery-image').fancybox({autoCenter: true});
+      $('.gallery-image').each(function() {
+    		var offset = $(this).offset();
+    		var fbPosistion = offset.top - 200;
+    		$(this).fancybox({
+    			'type'				: 'iframe',
+    			'onComplete'		: function(){
+    									var fbCssText = $('#fancybox-wrap').css('cssText');
+    										fbCssText = fbCssText + '; top: ' + fbPosistion + 'px !important;'
+    										$('#fancybox-wrap').css('cssText', fbCssText);
+    									}
+    		});
+    	});
+
     });
     </script>
   </head>
@@ -44,7 +48,7 @@
     }(document, 'script', 'facebook-jssdk'));
   </script>
     <div id="container">
-      <h1 id="fb-welcome">Gallery</h1>
+      <h1>Gallery</h1>
 
       <script>
         $(function() {
