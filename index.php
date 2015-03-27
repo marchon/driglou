@@ -8,6 +8,14 @@
   	<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
     <script type="text/javascript">
 		$(document).ready(function() {
+      var orig = $.fancybox._getPosition;
+      $.extend($.fancybox, {
+          _getPosition: function(onlyAbsolute) {
+              var rez = orig(onlyAbsolute);
+              delete rez.top;
+              return rez;
+          }
+      });
 			$('.gallery-image').fancybox({autoCenter: true});
     });
     </script>
@@ -39,7 +47,6 @@
       <h1 id="fb-welcome">Gallery</h1>
 
       <script>
-        $.fancybox.reposition();
         $(function() {
             $(".lazy").lazyload();
         });
