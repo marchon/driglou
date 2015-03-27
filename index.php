@@ -8,7 +8,10 @@
   	<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
     <script type="text/javascript">
 		$(document).ready(function() {
-			$('.gallery-image').fancybox({autoCenter: true});
+			$('.gallery-image')parent.$.fancybox({
+        padding: 0,
+        autoCenter: true
+      });
       $.fancybox.reposition();
     });
     </script>
