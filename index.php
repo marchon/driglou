@@ -8,19 +8,7 @@
   	<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
     <script type="text/javascript">
 		$(document).ready(function() {
-      $('.gallery-image').each(function() {
-    		var offset = $(this).offset();
-    		var fbPosistion = offset.top - 200;
-    		$(this).fancybox({
-    			'type'				: 'iframe',
-    			'onComplete'		: function(){
-    									var fbCssText = $('#fancybox-wrap').css('cssText');
-    										fbCssText = fbCssText + '; top: ' + fbPosistion + 'px !important;'
-    										$('#fancybox-wrap').css('cssText', fbCssText);
-    									}
-    		});
-    	});
-
+			$('.gallery-image').fancybox({autoCenter: true});
     });
     </script>
   </head>
@@ -34,9 +22,6 @@
      });
 
      // ADD ADDITIONAL FACEBOOK CODE HERE
-    window.onload = function() {
-      FB.Canvas.setAutoGrow();
-    }
    };
 
    (function(d, s, id){
