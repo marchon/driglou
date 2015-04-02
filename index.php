@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>My gallery wished to be put on fb</title>
+    <title>Gallery - Art for Heart</title>
     <link rel="stylesheet" href="css/style.css" media="screen" charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="source/jquery.fancybox.js?v=2.1.5"></script>
