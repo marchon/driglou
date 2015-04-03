@@ -30,7 +30,7 @@ $bucket = getenv('S3_BUCKET');
               $image_type = in_array($detectedType, $allowedTypes);
               if($image_type){
                 try{
-                  $upload = $s3->upload($bucket, $_FILES['uploading']['name'][x], fopen($_FILES['uploading']['tmp_name'][x], 'rb'), 'public-read');
+                  $upload = $s3->upload($bucket, $_FILES['uploading']['name'][$x], fopen($_FILES['uploading']['tmp_name'][$x], 'rb'), 'public-read');
                   echo '<p>Upload <a href="', htmlspecialchars($upload->get('ObjectURL')), '">successful</a></p>';
                 }catch(Exception $e){
                   echo '<p>Upload error :', $e -> getMessage(), '</p>';
