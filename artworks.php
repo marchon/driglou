@@ -1,8 +1,7 @@
 <?php
 require('vendor/autoload.php');
-// this will simply read AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY from env vars
 $s3 = Aws\S3\S3Client::factory();
-$bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!');
+$bucket = getenv('S3_BUCKET');
 ?>
 <html>
   <head>
@@ -13,17 +12,47 @@ $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!'
   </head>
   <body>
     <div id="container">
-      <form method="post">
+      <form enctype="multipart/form-data" method="post">
       <input type = "button" class="add-artwork"/>
-      <input type = "submit" class="save-artwork"/>
+      <input type = "submit" class="save-artwork" value = ""/>
       <h1>Artoworks manager</h1>
+      <?php
+        $message;
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+          echo '<pre>';
+          var_dump($_FILES['uploading']['name']);
+          echo '</pre>';
+          for($x = 0; $x < count($_FILES['uploading']['name']); $x++){
+
+            if(!empty($_FILES['uploading']['name'][$x])){
+              $allowedTypes = array(IMAGETYPE_PNG, IMAGETYPE_JPEG);
+              $detectedType = exif_imagetype($_FILES['uploading']['tmp_name'][$x]);
+              $image_type = in_array($detectedType, $allowedTypes);
+              if($image_type){
+                try{
+                  $upload = $s3->upload($bucket, $_FILES['uploading']['name'][x], fopen($_FILES['uploading']['tmp_name'][x], 'rb'), 'public-read');
+                  echo '<p>Upload <a href="', htmlspecialchars($upload->get('ObjectURL')), '">successful</a></p>';
+                }catch(Exception $e){
+                  echo '<p>Upload error :', $e -> getMessage(), '</p>';
+                }
+              }else{
+                $message = "Upload only jpg/png images.";
+              }
+            }else{
+              $message = "Upload all the images.";
+            }
+          }
+
+          if(!empty($message)){
+            echo '<p class = "message">' . $message . '</p>';
+          }
+        }
+      ?>
         <ul class = "artwork-list">
         </ul>
       </form>
       <?php
-        if(isset($_POST['uploading'])){
-          var_dump($_POST['uploading']);
-        }
+        echo '<pre>';
       ?>
       <script>
         $(function(){
