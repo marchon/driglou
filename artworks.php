@@ -1,3 +1,9 @@
+<?php
+require('vendor/autoload.php');
+// this will simply read AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY from env vars
+$s3 = Aws\S3\S3Client::factory();
+$bucket = 'driglou';
+?>
 <html>
   <head>
     <title></title>
@@ -7,11 +13,18 @@
   </head>
   <body>
     <div id="container">
+      <form method="post">
       <input type = "button" class="add-artwork"/>
-      <input type = "button" class="save-artwork"/>
+      <input type = "submit" class="save-artwork"/>
       <h1>Artoworks manager</h1>
-      <ul class = "artwork-list">
-      </ul>
+        <ul class = "artwork-list">
+        </ul>
+      </form>
+      <?php
+        if(isset($_POST['uploading'])){
+          var_dump($_POST['uploading']);
+        }
+      ?>
       <script>
         $(function(){
           $(".artwork-list").sortable({
@@ -41,7 +54,7 @@
             }
           }
           $(".add-artwork").click(function(){
-            $(".artwork-list").prepend("<li class='artwork'><div class='drag-area'></div><div class='art-image' style = 'background-image: url(images/upload.jpg)'><input class = 'artwork-upload' type='file' accept='image/*'></div><div class='art-info'><p><span>Technique: </span><input type='text' name='tecnique' value=''></p><p><span>Support: </span><input type='text' name='support' value=''></p><p><span>Size: </span><input type='text' name='size' value=''></p></div></li>");
+            $(".artwork-list").prepend("<li class='artwork'><div class='drag-area'></div><div class='art-image' style = 'background-image: url(images/upload.jpg)'><input class = 'artwork-upload' name = 'uploading[]' type='file' accept='image/*'></div><div class='art-info'><p><span>Technique: </span><input type='text' name='tecnique' value=''></p><p><span>Support: </span><input type='text' name='support' value=''></p><p><span>Size: </span><input type='text' name='size' value=''></p></div></li>");
           });
           $(".save-artwork").click(function(){
             for(var n = 1; n <= $(".artwork-list").children().length; n++){
